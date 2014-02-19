@@ -361,17 +361,19 @@ public class PresenceStatusActivity
                 {
                     logger.error("Error reading the avatar: "+e);
                 }
-				finally
-				{
-				if(fin != null)
-					try
-					{
-						fin.close();
-					} catch (IOException e)
-					{
-						logger.error("Unable to close FileInputStream: " + e);
-					}
-				}
+                finally
+                {
+                    if (fin != null)
+                        try
+                        {
+                            fin.close();
+                        }
+                        catch (IOException e)
+                        {
+                            logger.error("Unable to close FileInputStream: "
+                                + e);
+                        }
+                }
             }
         }
     }
