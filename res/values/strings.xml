@@ -279,7 +279,7 @@
     <string name="plugin_otr_authbuddydialog_I_HAVE">I have</string>
     <string name="plugin_otr_authbuddydialog_I_HAVE_NOT">I have not</string>
     <string name="plugin_otr_authbuddydialog_VERIFY_ACTION">verified that this is in fact the correct fingerprint for {0}.</string>
-    <string name="plugin_otr_authbuddydialog_FINGERPRINT_CHECK">Please enter the fingerprint you recieved from {0}.</string>
+    <string name="plugin_otr_authbuddydialog_FINGERPRINT_CHECK">Please enter the fingerprint you received from {0}.</string>
     <string name="plugin_otr_configform_MY_PRIVATE_KEYS">My Private Keys</string>
     <string name="plugin_otr_configform_KNOWN_FINGERPRINTS">Known Fingerprints</string>
     <string name="plugin_otr_configform_CB_AUTO">Automatically initiate private messaging</string>
@@ -416,7 +416,7 @@
     <string name="service_gui_ADD_CONTACT_TO">Add contact to</string>
     <string name="service_gui_ADD_CONTACT_ERROR_TITLE">Add contact Error</string>
     <string name="service_gui_ADD_CONTACT_NOT_CONNECTED">
-        You need to be connected in in order to add a contact.
+        You need to be connected in order to add a contact.
         Please sign in to the selected provider and try again.
     </string>
     <string name="service_gui_ADD_CONTACT_ERROR" >
@@ -461,7 +461,7 @@
     <string name="service_gui_callinfo_VIDEO_INFO">Video info</string>
     <string name="service_gui_callinfo_LOCAL_IP">Local IP / Port</string>
     <string name="service_gui_callinfo_REMOTE_IP">Remote IP / Port</string>
-    <string name="service_gui_callinfo_BANDWITH">Bandwith</string>
+    <string name="service_gui_callinfo_BANDWITH">Bandwidth</string>
     <string name="service_gui_callinfo_LOSS_RATE">Loss rate</string>
     <string name="service_gui_callinfo_RTT">RTT</string>
     <string name="service_gui_callinfo_JITTER">Jitter</string>
@@ -902,7 +902,7 @@
     <string name="pref_key_stun_turn_servers" >pref_key_stun_turn_servers</string>
 
     <string name="pref_key_use_jingle_nodes" >pref_key_use_jingle_nodes</string>
-    <string name="pref_key_auto_relay_dicovery" >pref_key_auto_relay_dicovery</string>
+    <string name="pref_key_auto_relay_dicovery" >pref_key_auto_relay_discovery</string>
 
     <string name="pref_key_jingle_node_list" >pref_key_jingle_node_list</string>
 
