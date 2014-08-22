@@ -1004,6 +1004,7 @@
     <string name="plugin_notificationconfig_event_CallSaved">Call Saved</string>
     <string name="plugin_notificationconfig_event_HangUp">Hang Up</string>
     <string name="plugin_notificationconfig_event_HangUp_description">Hang up description</string>
+	<string name="plugin_notificationconfig_event_missed_call">Missed Call</string>
     <string name="plugin_notificationconfig_popup_notification">Popup notification</string>
     <string name="plugin_notificationconfig_notification_sound">Sound on notification device
     </string>
