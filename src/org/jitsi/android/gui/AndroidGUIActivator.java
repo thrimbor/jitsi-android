@@ -100,10 +100,10 @@ public class AndroidGUIActivator
     {
         Context androidContext = JitsiApplication.getGlobalContext();
 
-        SecurityAuthority secuirtyAuthority
+        SecurityAuthority securityAuthority
                 = new AndroidSecurityAuthority();
 
-        loginRenderer = new AndroidLoginRenderer(secuirtyAuthority);
+        loginRenderer = new AndroidLoginRenderer(securityAuthority);
 
         loginManager = new LoginManager(loginRenderer);
 
@@ -146,7 +146,7 @@ public class AndroidGUIActivator
 
         // Registers UIService stub
         AndroidUIServiceImpl uiService
-            = new AndroidUIServiceImpl( secuirtyAuthority);
+            = new AndroidUIServiceImpl( securityAuthority);
 
         bundleContext.registerService(
             UIService.class.getName(), uiService, null);
