@@ -81,6 +81,8 @@ class ConfigWidgetUtil
 
         mapSummary = attArray.getBoolean(
                 R.styleable.ConfigWidget_mapSummary, mapSummary);
+
+        attArray.recycle();
     }
 
     /**

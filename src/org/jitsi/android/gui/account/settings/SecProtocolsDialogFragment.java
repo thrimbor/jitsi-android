@@ -153,7 +153,7 @@ public class SecProtocolsDialogFragment
         {
             protocols.put(
                     protocolsAdapter.encryptions[i],
-                    new Integer(i));
+                    Integer.valueOf(i));
         }
         securityReg.setEncryptionProtocols(protocols);
         securityReg.setEncryptionProtocolStatus(protocolsAdapter.statusMap);

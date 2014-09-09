@@ -486,11 +486,9 @@ public class JabberPreferenceFragment
         }
         else if(key.equals(PREF_KEY_RESOURCE_PRIORITY))
         {
-            reg.setPriority(
-                    new Integer(shPrefs.getString(
-                                    PREF_KEY_RESOURCE_PRIORITY,
-                                    null))
-            );
+            reg.setPriority(Integer.valueOf(
+                    shPrefs.getString(PREF_KEY_RESOURCE_PRIORITY, null)
+            ));
         }
         else if(key.equals(PREF_KEY_ICE_ENABLED))
         {
