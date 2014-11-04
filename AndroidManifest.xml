@@ -124,7 +124,7 @@
             </intent-filter>
         </receiver>
         <!-- Start on boot -->
-        <receiver android:name=".android.BootReciever"
+        <receiver android:name=".android.BootReceiver"
                   android:exported="true"
                   android:enabled="true">
             <intent-filter>

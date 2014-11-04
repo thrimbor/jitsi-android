@@ -13,14 +13,14 @@ import org.jitsi.android.gui.*;
 /**
  * Called when the Android boot process finished and Jitsi can be started.
  */
-public class BootReciever
+public class BootReceiver
     extends BroadcastReceiver
 {
     /**
      * The logger.
      */
     private static final Logger logger
-            = Logger.getLogger(BootReciever.class);
+            = Logger.getLogger(BootReceiver.class);
 
     /**
      * Name of config property that indicates whether Jitsi should be started
