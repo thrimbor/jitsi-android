@@ -31,9 +31,10 @@ public class BootReceiver
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        final boolean start = true;
-//                JitsiApplication.getConfig()
-//                .getBoolean(START_ON_BOOT_PROPERTY, true);
+        final boolean start = JitsiApplication.getConfig()
+								.getBoolean(START_ON_BOOT_PROPERTY, false);
+			// FIXME: this produces a NullPointerException in JitsiApplication.java:312					
+			
 
         if (logger.isDebugEnabled())
         {
