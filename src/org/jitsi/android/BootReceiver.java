@@ -7,6 +7,9 @@
 package org.jitsi.android;
 
 import android.content.*;
+import android.database.Cursor;
+import android.database.sqlite.*;
+import net.java.sip.communicator.impl.configuration.SQLiteConfigurationStore;
 import net.java.sip.communicator.util.*;
 import org.jitsi.android.gui.*;
 
@@ -31,10 +34,52 @@ public class BootReceiver
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        final boolean start = JitsiApplication.getConfig()
-								.getBoolean(START_ON_BOOT_PROPERTY, false);
-			// FIXME: this produces a NullPointerException in JitsiApplication.java:312					
-			
+        boolean start = false;
+
+        /*
+        The following code determines whether Jitsi should be started by
+        directly examining the SQLite-Database in which the config ist stored.
+        It's an ugly hack, but it gets the job done.
+        Better suggestions are appreciated.
+         */
+        SQLiteOpenHelper openHelper = new SQLiteOpenHelper(
+                context,
+                SQLiteConfigurationStore.class.getName() + ".db",
+                null,
+                1
+        )
+        {
+            @Override
+            public void onCreate(SQLiteDatabase db) {}
+
+            @Override
+            public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
+        };
+
+        SQLiteDatabase db = openHelper.getReadableDatabase();
+        Cursor cursor
+                = db.query(
+                "Properties",
+                new String[] { "Value" },
+                "Name = ?",
+                new String[] { START_ON_BOOT_PROPERTY },
+                null,
+                null,
+                null,
+                "1");
+
+        try
+        {
+            if ((cursor.getCount() == 1) && cursor.moveToFirst())
+                start = Boolean.parseBoolean(cursor.getString(0));
+        }
+        finally
+        {
+            cursor.close();
+        }
+        db.close();
+        openHelper.close();
+
 
         if (logger.isDebugEnabled())
         {
